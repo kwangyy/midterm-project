@@ -45,7 +45,7 @@ Do note that catboost takes longer than the other modules to install.
 You can run the environment using pipenv shell, and deploy the model as normal.
 To deploy the model, refer to the "Depolyment of model" part of the README.
 
-# Docker
+## Docker
 
 I have built the model and pushed it to [kwangyy/salary-prediction:3.8.12-slim](https://hub.docker.com/r/kwangyy/salary-prediction) for easy use! 
 To take the model from the docker container I built, just replace
@@ -82,7 +82,7 @@ Similarly, you can just use the dockerfile in this repository.
 
 4. Run the docker container with `Docker run -it -p 9696:9696 salary-prediction:latest` so that we can use our model!
 
-# Deploying Docker container on Heroku
+## Deploying Docker container on Heroku
 
 We can deploy this model to the cloud! Since we are already using a docker container, Heroku offers an option to allow us to deploy a Docker container up to the cloud.
 
