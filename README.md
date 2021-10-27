@@ -26,7 +26,7 @@ The code folder consists of:
 <li> requirements.txt and Procfile for Heroku deployment </li> 
 </ul>
 
-as well as some files that logs the training process (catboostinfo) and some notebook checkpoints.
+as well as some files that logs the training process (catboostinfo), some files for deplyoing the model to the cloud using AWS Elastic Beanstalk and some notebook checkpoints.
 
 *= second notebook had problems loading on github, and part of it is due to the output from the notebook. Therefore, I have decided to include both copies. Do note that the notebook with the output WILL lag, so it is up to your own discretion to download it. It is, however, still there.
   
@@ -88,15 +88,15 @@ Similarly, you can just use the dockerfile in this repository.
 
 4. Run the docker container with `Docker run -it -p 9696:9696 salary-prediction:latest` so that we can use our model!
 
-## Deploying Docker container on Heroku
-
-We can deploy this model to the cloud! Since we are already using a docker container, Heroku offers an option to allow us to deploy a Docker container up to the cloud.
-
-1. Make sure that you sign in with heroku login, and create an application for this model 
-2. Set the stack to 'container' with  `heroku stack:set container --app (app_name)` whereby the app_name is what you set it to be.
-3. 
-
-
+## Deploying onto AWS Elastic Beanstalk
+To deploy this into the cloud using AWS Elastic Beanstalk: 
+1. Use `pipenv install --dev awsebcli` to install the command line for AWS Elastic Beanstalk. This is because we only need Elastic Beanstalk for deploying to the cloud and not actually for the model itself. 
+2. Use `eb local run --port 9696`, allowing EB to build the Docker container.
+3. Use `eb create salary-serving-env` to create the environment for the container itself 
+4. AWS will start creating the environment, so do give it a few minutes. Once it is done, there will be a line that says 'Application available at ....'. Copy and paste the link - that is your new host. 
+5. If you happen to use a .py file for a request, do change your host to the link, and your url to a f-string.
+e.g. If your host = `kwangyy.importantletters.us-east-2.elasticbeanstalk.com`, then your url can be f'http://{host}/predict'
+6. To terminate, use `eb terminate salary-serving-env` to not waste your EC2 hours (you need to pay for your instance hours once it hits a certain limit, you know that right?) 
 
 ## If you like the project, it would be appreciated if you star this repo. Please feel free to fork the content as well!
 [Kaggle](https://www.kaggle.com/kwangyangchia)
