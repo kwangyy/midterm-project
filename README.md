@@ -18,13 +18,16 @@ The data folder consists of the original dataset, as well as the cleaned dataset
 The code folder consists of: 
 <ul>
 <li> Data Cleaning & EDA - part of the notebook </li>
-<li> Training of model & Hyperparameter Tuning - part of notebook </li>
+<li> Training of model & Hyperparameter Tuning (output & outputless)* - part of notebook </li>
 <li> train.py - to train the final model + saving it using pickle </li>
 <li> predict.py - to load the model and serve it via a web service </li>
 <li> pipenv and pipenv.lock for the virtunal environment using pipenv </li>
 <li> Dockerfile for using a Docker container </li>
 <li> requirements.txt and Procfile for Heroku deployment </li> 
+</ul>
 as well as some files that logs the training process (catboostinfo) and some notebook checkpoints.
+*= second notebook had problems loading on github, and part of it is due to the output from the notebook. Therefore, I have decided to include both copies. Do note that the notebook with the output WILL lag, so it is up to your own discretion to download it. It is, however, still there.
+  
 
 ## Deployment of model
 
