@@ -95,7 +95,7 @@ To deploy this into the cloud using AWS Elastic Beanstalk:
 3. Use `eb create salary-serving-env` to create the environment for the container itself 
 4. AWS will start creating the environment, so do give it a few minutes. Once it is done, there will be a line that says 'Application available at ....'. Copy and paste the link - that is your new host. 
 5. If you happen to use a .py file for a request, do change your host to the link, and your url to a f-string.
-e.g. If your host = `kwangyy.importantletters.us-east-2.elasticbeanstalk.com`, then your url can be f'http://{host}/predict'
+e.g. If your host = `kwangyy.importantletters.us-east-2.elasticbeanstalk.com`, then your url = `f'http://{host}/predict'`
 6. To terminate, use `eb terminate salary-serving-env` to not waste your EC2 hours (you need to pay for your instance hours once it hits a certain limit, you know that right?) 
 
 ## If you like the project, it would be appreciated if you star this repo. Please feel free to fork the content as well!
