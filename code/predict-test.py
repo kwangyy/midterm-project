@@ -1,4 +1,5 @@
 import requests
+
 url = 'http://localhost:9696/predict'
 
 salary_id = '31363'
