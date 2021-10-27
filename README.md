@@ -39,15 +39,21 @@ To deploy this model with waitress, please use: waitress-serve --listen=0.0.0.0:
 ## Virtual Environment/venv 
 
 I used pipenv for the virtual environment. In order to use the same venv as me, do use pip install pipenv.
+
 To replicate the environment, on your command line, use pipenv install numpy scikit-learn==0.24.2 catboost flask gunicorn waitress
+
 Do note that catboost takes longer than the other modules to install. 
+
 (For reference, catboost took about a minute or two on my computer, the rest took about 10 seconds) 
+
 You can run the environment using pipenv shell, and deploy the model as normal.
+
 To deploy the model, refer to the "Depolyment of model" part of the README.
 
 ## Docker
 
-I have built the model and pushed it to [kwangyy/salary-prediction:3.8.12-slim](https://hub.docker.com/r/kwangyy/salary-prediction) for easy use! 
+I have built the model and pushed it to [kwangyy/salary-prediction:3.8.12-slim](https://hub.docker.com/r/kwangyy/salary-prediction) for easy use!
+
 To take the model from the docker container I built, just replace
 `FROM python:3.8.12-slim` with 
 `FROM kwangyy/salary-prediction:3.8.12` in the dockerfile.
