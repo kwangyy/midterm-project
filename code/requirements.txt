@@ -1,0 +1,6 @@
+pickle
+numpy
+pandas
+catboost
+flask
+waitress
