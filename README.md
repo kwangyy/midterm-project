@@ -26,6 +26,7 @@ The code folder consists of:
 <li> requirements.txt and Procfile for Heroku deployment </li> 
 </ul>
 as well as some files that logs the training process (catboostinfo) and some notebook checkpoints.
+
 *= second notebook had problems loading on github, and part of it is due to the output from the notebook. Therefore, I have decided to include both copies. Do note that the notebook with the output WILL lag, so it is up to your own discretion to download it. It is, however, still there.
   
 
@@ -92,4 +93,5 @@ We can deploy this model to the cloud! Since we are already using a docker conta
 
 ## If you like the project, it would be appreciated if you star this repo. Please feel free to fork the content as well!
 [Kaggle](https://www.kaggle.com/kwangyangchia)
+
 [Linkedin](https://www.linkedin.com/in/kwang-yang-chia/)
