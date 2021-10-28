@@ -21,6 +21,7 @@ The code folder consists of:
 <li> Training of model & Hyperparameter Tuning (output & outputless)* - part of notebook </li>
 <li> train.py - to train the final model + saving it using pickle </li>
 <li> predict.py - to load the model and serve it via a web service </li>
+<li> predict-test.py and predict-test-cloud.py - to test the output of the model, depending on where you want to use it </li>
 <li> pipenv and pipenv.lock for the virtunal environment using pipenv </li>
 <li> Dockerfile for using a Docker container </li>
 <li> requirements.txt and Procfile for Heroku deployment </li> 
