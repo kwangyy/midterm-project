@@ -90,6 +90,8 @@ Similarly, you can just use the dockerfile in this repository.
 4. Run the docker container with `Docker run -it -p 9696:9696 salary-prediction:latest` so that we can use our model!
 
 ## Deploying onto AWS Elastic Beanstalk
+**EDIT: The instance has been terminated since I do not want to incur additional costs. However, the instructions are still there for you to refer to if you so wish to replicate the AWS Elastic Beanstalk instance.**
+
 To deploy this into the cloud using AWS Elastic Beanstalk: 
 1. Use `pipenv install --dev awsebcli` to install the command line for AWS Elastic Beanstalk. This is because we only need Elastic Beanstalk for deploying to the cloud and not actually for the model itself. 
 2. Use `eb local run --port 9696`, allowing EB to build the Docker container.
