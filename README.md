@@ -28,7 +28,7 @@ The code folder consists of:
 
 as well as some files that logs the training process (catboostinfo), some files for deplyoing the model to the cloud using AWS Elastic Beanstalk and some notebook checkpoints.
 
-*= second notebook had problems loading on github, and part of it is due to the output from the notebook. Therefore, I have decided to include both copies. Do note that the notebook with the output WILL lag, so it is up to your own discretion to download it. It is, however, still there.
+\* = second notebook had problems loading on github, and part of it is due to the output from the notebook. Therefore, I have decided to include both copies. Do note that the notebook with the output WILL lag, so it is up to your own discretion to download it. It is, however, still there.
   
 
 ## Deployment of model
@@ -84,7 +84,7 @@ ENTRYPOINT ["waitress-serve", "--listen=0.0.0.0:9696", "predict:app"]
 This allows us to install python, run pipenv and its dependencies, run our predict script and our model itself and deploys our model using waitress.
 Similarly, you can just use the dockerfile in this repository.
 
-3. Build the docker container with `Docker built -t salary-prediction . `
+3. Build the docker container with `Docker build -t salary-prediction . `
 
 4. Run the docker container with `Docker run -it -p 9696:9696 salary-prediction:latest` so that we can use our model!
 
