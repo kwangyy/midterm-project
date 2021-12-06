@@ -24,7 +24,6 @@ The code folder consists of:
 <li> predict-test.py and predict-test-cloud.py - to test the output of the model, depending on where you want to use it </li>
 <li> pipenv and pipenv.lock for the virtunal environment using pipenv </li>
 <li> Dockerfile for using a Docker container </li>
-<li> requirements.txt and Procfile for Heroku deployment </li> 
 </ul>
 
 as well as some files that logs the training process (catboostinfo), some files for deplyoing the model to the cloud using AWS Elastic Beanstalk and some notebook checkpoints.
